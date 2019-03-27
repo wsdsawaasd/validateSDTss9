@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function CheckNumberPhone(str) {
+        let RegEx = /^\(8{1}4{1}\)-\(0{1}[1-9]{1}[0-9]{8}\)$/;
+        if (RegEx.test(str)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let a = '(84)-(0976505749)';
+    let a1 = '(84)-(0076505749)';
+    let a2 = '(84)-(03765053749)';
+    let a3 = '(84)-(11765053749)';
+    console.log(CheckNumberPhone(a));
+    console.log(CheckNumberPhone(a1));
+    console.log(CheckNumberPhone(a2));
+    console.log(CheckNumberPhone(a3));
+</script>
+</body>
+</html>
